@@ -1,0 +1,10 @@
+print('某学员考试成绩:')
+python = input('输入python成绩')
+english = input('输入english成绩')
+c语言 = input('输入c语言成绩')
+a = int (python) - int(english)
+print('python与english的分差')
+print(a)
+b =(int(python)+int( c语言)+int (english))/3
+print('三门平均分')
+print(b)
