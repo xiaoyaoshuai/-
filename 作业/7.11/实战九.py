@@ -1,8 +1,21 @@
-a = input ('请输入第一个数:')
-x = a
-b = input ('请输入第二个数:')
+a = 1
+b = 2
+c = 0
+c = a
 a = b
-b = x
-print ('两者互换')
+b= c
 print (a)
 print (b)
+
+e=10
+f=5
+e,f=f,e
+print(e,f)
+
+
+w = 3
+r = 5
+w = w + r 
+r = w - r
+w = w - r
+print(w,r)

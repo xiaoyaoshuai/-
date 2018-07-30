@@ -11,6 +11,6 @@ if (number1 == number and passwd1 == passwd):
     elif money1 <= money:
         print ('此次取款%d元,剩余%d元'%(money1,money-money1))
     else:
-            print ('余额不足')
+        print ('余额不足')
 else:
-    print ('非法账户')
+    print('非法账户')
