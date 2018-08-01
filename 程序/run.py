@@ -30,7 +30,7 @@ def main():#运行
         elif key == '3':
             shuju.search_card()
         elif key == '4':
-            shuju.del_card()
+            shuju.del_card(shuju.id_card)
         elif key == '5':
             shuju.change_card()
         elif key == '6':
@@ -44,5 +44,5 @@ def main():#运行
             if quit == 'Yes':
                 print('已退出')
                 break
-main()
+
 
