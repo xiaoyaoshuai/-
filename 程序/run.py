@@ -44,6 +44,10 @@ def main():#运行
             if quit == 'Yes':
                 print('已退出')
                 break
+            else:
+                print('输入有误')
+        else:
+            print('输入错误，请重试')
 def pt(fun):
     def kv():
         print('普通用户')
@@ -66,6 +70,10 @@ def main1():
             if quit == 'Yes':
                 print('已退出')
                 break
+            else:
+                print('输入有误')
+        else:
+            print('输入有误，请重试')
 while True:
     a = input('请您选择:(1)管理者(2)普通用户')
     if a == '1':
@@ -74,4 +82,5 @@ while True:
     elif a =='2':
         main1()
         break
-
+    else:
+        print('输入有误，请重试')
