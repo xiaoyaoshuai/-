@@ -18,21 +18,16 @@ notebook: 数据库
 5. 注释已有的配置添加新的配置
 # Python
 1. pickle持久化的储存数据
-    >   import pickle
-        
+   ```     
+        import pickle
         a = {" name ": "Tom", "age": "40"}
-        
-        with open(‘text.txt‘, ‘wb‘) as file:
-            
+        with open(‘text.txt‘, ‘wb‘) as file:    
             pickle.dump(a, file) 
-        
-        with open(‘text.txt‘, ‘rb‘) as file2:
-            
+        with open(‘text.txt‘, ‘rb‘) as file2:    
             b = pickle.load(file2)
-        
         print(type(b))
-        
         print(b)
+```
 2. json
 # 数据库
 1. DB
