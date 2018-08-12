@@ -28,7 +28,7 @@ kmp
 4. default_storage_engine = InnoDB 修改处理器
 5. cd /etc/mysql/mysql.conf.d/mysqld.cnf 数据库配置文件
 6. 引擎 处理事务  
->种类：InnoDB , MEMORY , BLACKHOLE ， MyIASM
+>种类：InnoDB , MEMORY , BLACKHOLE ， MyIASM ,ARCHIVE
 7. select avg(age) from students; 查询students平均年龄
 8. 字符串，数值型，日期时间，二进制
 9. 创建语句
@@ -40,17 +40,41 @@ kmp
     style varchar(100) not null comment '风格',
     size char(3) not null comment '规格'
 )comment '刀削面菜谱'
+
+create table customer(
+    id int not null auto_increment comment'序号',
+    name varchar(50) not null comment '名字',
+    email varchar(50) null comment '邮箱',
+    address varchar(50) null default '魏善庄'comment '地址',
+    phone char(11) not null comment '电话',
+    birthday date not null comment '生日' ,
+    primary key(id)) comment '顾客信息表';
+
 ```
 10. alter table menu add phone int not null; 添加phone字段
 11. alter table menu drop column phone ; 删除phone字段
-12. alter table menu modify phone int(8) null default 18900000000;
+12. alter table menu modify phone int(8) null default 18900000000;修改电话的默认值为1890000000
 13. delete from menu ; 清空表 一条一条删，速度慢
     alter table menus drop column address; 删除表中的address字节
-14. truncate menu; 清空表 直接删除表，速度块
+14. truncate menu; 清空表 直接删除表，速度块 保存表的结构然后重新创建一个表
 15. alter table menu add birthday date not null comment '生日' ;添加生日列
-16.
+16.1292 时间从错误
 ```SQL
- create table student(id int auto_increment comment '学号',name varchar(50) not null comment '姓名',sex char(2) not null comment '性别',age int not null comment '年龄',birthday date not null comment '出生日期',id_card char(3) not null comment '证件类型',id_number char(18) not null comment '身份证号',phone char(11) not null comment '手机号',email varchar(50) not null comment '邮箱',place varchar(50) not null comment '籍贯',address varchar(50) not null comment '家庭住址',come_school date not null comment '入学时间',interest varchar(30) not null comment '兴趣爱好',first_name varchar(10) not null comment '首字母大写' ,primary key(id))comment '学生信息';
+ create table student(id int auto_increment comment '学号',
+ name varchar(50) not null comment '姓名',
+ sex char(2) not null comment '性别',
+ age int not null comment '年龄',
+ birthday date not null comment '出生日期',
+ id_card char(4) not null comment '证件类型',
+ id_number char(18) not null comment '身份证号',
+ phone char(11) not null comment '手机号',
+ email varchar(50) not null comment '邮箱',
+ place varchar(50) not null comment '籍贯',
+ address varchar(50) not null comment '家庭住址',
+ come_school date not null comment '入学时间',
+ interest varchar(30) not null comment '兴趣爱好',
+ first_name varchar(10) not null comment '首字母大写',
+ primary key(id))comment '学生信息';
 ```
 17. show create database stu 查看stu建立的详情
 18. update students set age = 21 where id = 1504747; 修改编号1504747的年龄为21

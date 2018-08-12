@@ -13,7 +13,8 @@ notebook: 数据库
         lsof -v 查看版本信息
         -i<条件>：列出符合条件的进程。（4、6、协议、:端口、 @ip ）
 3. systemctl status mysql  或者 service mysql status 查看服务状态
-   systemctl restart mysql 重启mysql  start stop
+   systemctl restart mysql 或者 service mysql restart 重启
+   mysql  start  stop
 4. man
 5. 注释已有的配置添加新的配置
 # Python
