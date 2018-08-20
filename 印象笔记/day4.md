@@ -60,7 +60,7 @@ create table customer(
 15. alter table menu add birthday date not null comment '生日' ;添加生日列
 16.1292 时间从错误
 ```SQL
- create table student(id int auto_increment comment '学号',
+ create table students(id int auto_increment comment '学号',
  name varchar(50) not null comment '姓名',
  sex char(2) not null comment '性别',
  age int not null comment '年龄',

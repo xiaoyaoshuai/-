@@ -5,7 +5,22 @@ notebook: 数据库
 ---
 # Python
 1. uuid 
-
+UUID 是 通用唯一识别码（Universally Unique Identifier）的缩写，是一种软件建构的标准，亦为开放软件基金会组织在分布式计算环境领域的一部分。其目的，是让分布式系统中的所有元素，都能有唯一的辨识信息，而不需要通过中央控制端来做辨识信息的指定。如此一来，每个人都可以创建不与其它人冲突的UUID。在这样的情况下，就不需考虑数据库创建时的名称重复问题。目前最广泛应用的UUID，是微软公司的全局唯一标识符（GUID），而其他重要的应用，则有Linux ext2/ext3文件系统、LUKS加密分区、GNOME、KDE、Mac OS X等等。另外我们也可以在e2fsprogs包中的UUID库找到实现。
+UUID由以下几部分的组合：
+（1）当前日期和时间，UUID的第一个部分与时间有关，如果你在生成一个UUID之后，过几秒又生成一个UUID，则第一个部分不同，其余相同。
+（2）时钟序列。
+（3）全局唯一的IEEE机器识别号，如果有网卡，从网卡MAC地址获得，没有网卡以其他方式获得。
+```
+import uuid
+ 
+name = 'test_name'
+namespace = 'test_namespace'
+ 
+print uuid.uuid1()
+print uuid.uuid3(namespace,name)
+print uuid.uuid4()
+print uuid.uuid5(namespace,name)
+```
 # 数据库
 1. insert into 
 
@@ -38,4 +53,7 @@ insert into badboy  select  id,name,age,place from student where sex
 
 6. 删除行
 delete from badboy where id = 1504762; 删除id=1504762这一行
+统计次数
 select count(*) from badboy;
+7. 表重命名
+rename students to student
