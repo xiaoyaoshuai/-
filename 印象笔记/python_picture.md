@@ -23,4 +23,4 @@ for i in range(11,42):
             with open('/home/ws/PycharmProjects/untitled/作业/code/picture/{}.jpg'.format(name), 'wb') as out_file:
                 shutil.copyfileobj(response.raw, out_file)
 ```
-
+招工作给公司用自己的邮箱发比较正规

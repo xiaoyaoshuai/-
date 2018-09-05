@@ -10,8 +10,8 @@ notebook: 数据库
 1. select name,place from students where name like '李%' ;
 2. select name,place from students where name like '%泳%' ; 
 %不区分大小写
-2. select name from students trim(name) like '%三';  三后面有空格时用trim
-3. select name from students email is null ;
+2. select name from students where trim(name) like '%三';  三后面有空格时用trim
+3. select name from students where email is null ;
 
 ## 2.通配符  '_'
 匹配一个字符
