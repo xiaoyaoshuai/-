@@ -1,0 +1,21 @@
+s = 'a123456123789'
+x = input('原字符')
+k = input('替换')
+def change(s):
+    for i in range(len(s)):
+        for j in range(i,len(s)):
+            if x == s[i:j]:
+                s1 = s[:i]
+                c = s[j:]
+                s = s1+k+c
+    return s
+
+new = change(s)
+count={}
+for x in s:
+    count.setdefault(x, 0)
+    count[x] = count[x] + 1
+    v = count[x]
+for i in range(v):
+    change(new)
+print(new)
